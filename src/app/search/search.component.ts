@@ -25,11 +25,11 @@ export class SearchComponent implements OnInit {
     { id: 4, description: '4 Year above' },
     { id: 5, description: '5 Year above' }
   ]
+  filteredEmployees: IEmployee[];
   constructor(private employeeService: EmployeeService) {
     this.employeeService.getEmployees().subscribe(
       (response) => {
-        this.employeesResponse = response;
-        this.employees = this.employeesResponse;
+        this.employeesResponse = this.employees = this.filteredEmployees = response;
       }
     );
     this.searchForm = new FormGroup({
@@ -45,9 +45,10 @@ export class SearchComponent implements OnInit {
   }
 
   onClickOfCheckbox(event: boolean) {
-    this.employees = this.employeesResponse
     if (event) {
-      this.employees = _.filter(this.employeesResponse, { location: 'Bangalore' })
+      this.employees = _.filter(this.filteredEmployees, { location: 'Bangalore' })
+    } else {
+      this.employees = this.filteredEmployees;
     }
   }
   submit() {
@@ -63,6 +64,7 @@ export class SearchComponent implements OnInit {
     // remove experience filter as data is already filetr by this and filter remaining data
     const filteredData = _.filter(experienceFilteredData, _.omit(filters, ['experience']));
     this.employees = filteredData as IEmployee[];
+    this.filteredEmployees = this.employees;
   }
   cancel() {
     this.searchForm.reset();
