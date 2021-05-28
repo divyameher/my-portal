@@ -1,13 +1,14 @@
 .search-container {
     display: flex;
-    height: 100%;
+    height: calc(100vh - 65px);
     .search-section {
-        width: 300px;
+        min-width: 300px;
         border-right: 1px solid lightgray;
     }
     .results-section {
         background: #e9f5e9;
         flex-grow: 1;
+        overflow-y: auto;
         .top-section {
             display: flex;
             align-items: center;
@@ -23,6 +24,9 @@
         .bottom-section {
             height: 100%;
             padding: 15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 }
