@@ -1,0 +1,27 @@
+.search-container {
+    display: flex;
+    height: 100%;
+    .search-section {
+        width: 300px;
+        border-right: 1px solid lightgray;
+    }
+    .results-section {
+        background: #e9f5e9;
+        flex-grow: 1;
+        .top-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 15px;
+            .checkbox-container {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .bottom-section {
+            height: 100%;
+        }
+    }
+}
