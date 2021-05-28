@@ -16,30 +16,41 @@
             color: var(--medium-gray);
         }
         .team-dropdown {
-            margin: 20px;
+            margin: 0 20px 0 20px;
         }
     }
 }
 
-.side-nav {
+.link-active {
+    --link-active: #e9f5e9;
+    background: var(--link-active);
+}
+
+.content-section {
     display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    height: calc(100vh - 65px);
-    max-width: 150px;
-    a {
-        padding: 10px;
-        text-decoration: none;
-        color: var(--primary-color);
-        display: block;
-        span {
-            padding-left: 10px;
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        height: calc(100vh - 65px);
+        max-width: 150px;
+        a {
+            padding: 10px;
+            text-decoration: none;
+            color: var(--primary-color);
+            display: block;
+            span {
+                padding-left: 10px;
+            }
+        }
+        .header-section {
+            flex-grow: 1;
+        }
+        .footer-section {
+            padding-bottom: 15px;
         }
     }
-    .header-section {
-        flex-grow: 1;
-    }
-    .footer-section {
-        padding-bottom: 15px;
+    .right-section {
+        width: calc(100vw - 150px);
     }
 }
