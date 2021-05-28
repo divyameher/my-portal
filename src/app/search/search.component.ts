@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-search',
@@ -7,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   employees: any;
-  constructor() { }
-
-  ngOnInit(): void {
-    this.employees = [
+  isChecked: any;
+  employeesResponse: { profilePic: string; name: string; designation: string; ratings: number; experience: number; dateOfJoining: number; team: string; manager: string; mobileNo: string; email: string; location: string; }[];
+  constructor() {
+    this.employeesResponse = [
       {
         profilePic: '../../assets/images/employees/chandler_bing.PNG',
         name: 'Chandler Bing',
@@ -19,7 +20,7 @@ export class SearchComponent implements OnInit {
         experience: 5.8,
         dateOfJoining: 2017,
         team: 'OCBC Singapore',
-        manager: 'Lalit Agarawal',
+        manager: 'Janice',
         mobileNo: '7406559241',
         email: 'cbing@infrrd.ai',
         location: 'Bangalore'
@@ -32,7 +33,7 @@ export class SearchComponent implements OnInit {
         experience: 4,
         dateOfJoining: 2018,
         team: 'IDC',
-        manager: 'Lalit Agarawal',
+        manager: 'Janice',
         mobileNo: '7406559241',
         email: 'mgeller@infrrd.ai',
         location: 'Bangalore'
@@ -45,8 +46,8 @@ export class SearchComponent implements OnInit {
         experience: 2,
         dateOfJoining: 2019,
         team: 'Radian',
-        manager: 'Lalit Agarawal',
-        mobileNo: '7406588841',
+        manager: 'Janice',
+        mobileNo: '7406588842',
         email: 'pbuffay@infrrd.ai',
         location: 'Bangalore'
       },
@@ -58,7 +59,7 @@ export class SearchComponent implements OnInit {
         experience: 2,
         dateOfJoining: 2019,
         team: 'Rustify',
-        manager: 'Lalit Agarawal',
+        manager: 'Janice',
         mobileNo: '7406599941',
         email: 'rgreen@infrrd.ai',
         location: 'Bangalore'
@@ -71,7 +72,7 @@ export class SearchComponent implements OnInit {
         experience: 5,
         dateOfJoining: 2019,
         team: 'OCBC Singapore',
-        manager: 'Lalit Agarawal',
+        manager: 'Janice',
         mobileNo: '7406449941',
         email: 'rgeller@infrrd.ai',
         location: 'Bangalore'
@@ -84,7 +85,7 @@ export class SearchComponent implements OnInit {
         experience: 7,
         dateOfJoining: 2009,
         team: 'OCBC Singapore',
-        manager: 'Lalit Agarawal',
+        manager: 'Penny',
         mobileNo: '7555449941',
         email: 'scooper@infrrd.ai',
         location: 'Pune'
@@ -93,17 +94,28 @@ export class SearchComponent implements OnInit {
         profilePic: '../../assets/images/employees/raj.PNG',
         name: 'Raj',
         designation: 'Sr.UI Developer',
-        ratings: 5,
+        ratings: 2.5,
         experience: 7,
         dateOfJoining: 2009,
         team: 'OCBC Singapore',
-        manager: 'Lalit Agarawal',
+        manager: 'Penny',
         mobileNo: '7555449941',
         email: 'raj@infrrd.ai',
         location: 'Pune'
       }
-
     ]
+    this.employees = this.employeesResponse;
+  }
+
+  ngOnInit(): void {
+  }
+
+  onClickOfCheckbox(event: boolean) {
+    this.employees = this.employeesResponse
+    if (event) {
+      this.employees = _.filter(this.employeesResponse, { location: 'Bangalore' })
+    }
+
   }
 
 }
