@@ -2,7 +2,7 @@
     background: #fff;
     border: 1px solid lightgray;
     width: 310px;
-    height: 310px;
+    height: 330px;
     border-radius: 3px;
     font-size: 12px;
     .header {
@@ -39,6 +39,8 @@
         }
     }
     .ratings {
+        display: flex;
+        align-items: center;
         padding: 15px 10px;
         border-bottom: 1px solid lightgray;
     }
