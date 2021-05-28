@@ -4,6 +4,10 @@
     .search-section {
         min-width: 300px;
         border-right: 1px solid lightgray;
+        .search-form {
+            display: flex;
+            flex-direction: column;
+        }
     }
     .results-section {
         background: #e9f5e9;

@@ -10,4 +10,5 @@ export interface IEmployee {
     mobileNo: string;
     email: string;
     location: string;
+    department: string;
 }
