@@ -4,14 +4,22 @@
     .search-section {
         min-width: 300px;
         border-right: 1px solid lightgray;
+        display: flex;
+        flex-direction: column;
         .search-form {
             display: flex;
             flex-direction: column;
+            flex-grow: 1;
+            .dropdown-label {
+                font-size: 14px;
+                color: rgb(100, 91, 91);
+                padding: 10px 20px;
+            }
         }
         .button-section {
             display: flex;
             justify-content: space-around;
-            bottom: 0;
+            padding-bottom: 30px;
             .clear-button {
                 background: #fff;
                 border: 1px solid var(--primary-color);
