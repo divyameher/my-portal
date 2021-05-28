@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { IEmployee } from '../domain/IEmployee';
 
 @Component({
   selector: 'app-employee-card',
@@ -6,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./employee-card.component.scss']
 })
 export class EmployeeCardComponent implements OnInit {
-  @Input() employee: any;
+  @Input() employee: IEmployee;
 
   constructor() { }
 

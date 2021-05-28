@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as _ from 'lodash';
+import { IEmployee } from '../shared/domain/IEmployee';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +8,9 @@ import * as _ from 'lodash';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-  employees: any;
-  isChecked: any;
-  employeesResponse: { profilePic: string; name: string; designation: string; ratings: number; experience: number; dateOfJoining: number; team: string; manager: string; mobileNo: string; email: string; location: string; }[];
+  employees: IEmployee[];
+  isChecked: boolean = false;
+  employeesResponse: IEmployee[];
   constructor() {
     this.employeesResponse = [
       {
