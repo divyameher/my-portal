@@ -11,42 +11,50 @@
   </div>
 </nav>
 <div class="content-section">
-  <div class="side-nav">
-    <div class="header-section">
-      <a href="#">
-        <i class="far fa-address-card"></i>
-        <span>Overview</span>
-      </a>
-      <a href="#">
-        <i class="far fa-envelope"></i>
-        <span>Messages</span>
-      </a>
-      <a routerLink="/search" routerLinkActive="link-active">
-        <i class="fas fa-search"></i>
-        <span>Search</span>
-      </a>
-      <a href="#">
-        <i class="far fa-chart-bar"></i>
-        <span>Filter</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-history"></i>
-        <span>History</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-user"></i>
-        <span>My Account</span>
-      </a>
+  <div class="left-section">
+    <div *ngIf="isSideNavExpanded" class="side-nav">
+      <div class="header-section">
+        <a href="#">
+          <i class="far fa-address-card"></i>
+          <span>Overview</span>
+        </a>
+        <a href="#">
+          <i class="far fa-envelope"></i>
+          <span>Messages</span>
+        </a>
+        <a routerLink="/search" routerLinkActive="link-active">
+          <i class="fas fa-search"></i>
+          <span>Search</span>
+        </a>
+        <a href="#">
+          <i class="far fa-chart-bar"></i>
+          <span>Filter</span>
+        </a>
+        <a href="#">
+          <i class="fas fa-history"></i>
+          <span>History</span>
+        </a>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span>My Account</span>
+        </a>
+      </div>
+      <div class="footer-section">
+        <a href="#">
+          <i class="far fa-comments"></i>
+          <span>Get Help</span>
+        </a>
+        <a href="#">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Sign Out</span>
+        </a>
+      </div>
     </div>
-    <div class="footer-section">
-      <a href="#">
-        <i class="far fa-comments"></i>
-        <span>Get Help</span>
-      </a>
-      <a href="#">
-        <i class="fas fa-sign-out-alt"></i>
-        <span>Sign Out</span>
-      </a>
+    <div class="expand-collapse-hook">
+      <button class="fab-expand-collase" (click)="isSideNavExpanded=!isSideNavExpanded">
+        <!-- ToDo:Icon change dynamically -->
+        <i class="fas" [ngClass]="{'fa-angle-left': isSideNavExpanded, 'fa-angle-right': !isSideNavExpanded}"></i>
+      </button>
     </div>
   </div>
   <div class="right-section">
