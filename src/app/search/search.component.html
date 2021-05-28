@@ -4,7 +4,7 @@
     </div>
     <div class="results-section">
         <div class="top-section">
-            <div class="results-message">{{employees.length}} Results Found</div>
+            <div class="results-message">{{employees?.length}} Results Found</div>
             <div class="checkbox-container">
                 <input type="checkbox" name="filterBangloreEmployees" [(ngModel)]="isChecked"
                     (change)="onClickOfCheckbox(isChecked)">
