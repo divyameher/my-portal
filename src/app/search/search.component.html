@@ -22,8 +22,10 @@
                 <option *ngFor="let team of teams" [ngValue]="team">{{ team }}</option>
             </select>
         </form>
-        <button (click)="submit()">Submit</button>
-        <button (click)="cancel()">Cancel</button>
+        <div class="button-section">
+            <button class="clear-button" (click)="clear()">Clear</button>
+            <button class="submit-button" (click)="submit()">Submit</button>
+        </div>
     </div>
     <div class="results-section">
         <div class="top-section">

@@ -66,8 +66,9 @@ export class SearchComponent implements OnInit {
     this.employees = filteredData as IEmployee[];
     this.filteredEmployees = this.employees;
   }
-  cancel() {
+  clear() {
     this.searchForm.reset();
+    this.employees = this.employeesResponse;
   }
 
 }
