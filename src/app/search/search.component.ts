@@ -21,7 +21,8 @@ export class SearchComponent implements OnInit {
         team: 'OCBC Singapore',
         manager: 'Lalit Agarawal',
         mobileNo: '7406559241',
-        email: 'cbing@infrrd.ai'
+        email: 'cbing@infrrd.ai',
+        location: 'Bangalore'
       },
       {
         profilePic: '../../assets/images/employees/monica_geller.PNG',
@@ -30,10 +31,11 @@ export class SearchComponent implements OnInit {
         ratings: 4,
         experience: 4,
         dateOfJoining: 2018,
-        team: 'OCBC Singapore',
+        team: 'IDC',
         manager: 'Lalit Agarawal',
         mobileNo: '7406559241',
-        email: 'mgeller@infrrd.ai'
+        email: 'mgeller@infrrd.ai',
+        location: 'Bangalore'
       },
       {
         profilePic: '../../assets/images/employees/phoebe_buffay.PNG',
@@ -42,10 +44,11 @@ export class SearchComponent implements OnInit {
         ratings: 5,
         experience: 2,
         dateOfJoining: 2019,
-        team: 'OCBC Singapore',
+        team: 'Radian',
         manager: 'Lalit Agarawal',
         mobileNo: '7406588841',
-        email: 'pbuffay@infrrd.ai'
+        email: 'pbuffay@infrrd.ai',
+        location: 'Bangalore'
       },
       {
         profilePic: '../../assets/images/employees/rachel_green.PNG',
@@ -54,10 +57,11 @@ export class SearchComponent implements OnInit {
         ratings: 3,
         experience: 2,
         dateOfJoining: 2019,
-        team: 'OCBC Singapore',
+        team: 'Rustify',
         manager: 'Lalit Agarawal',
         mobileNo: '7406599941',
-        email: 'rgreen@infrrd.ai'
+        email: 'rgreen@infrrd.ai',
+        location: 'Bangalore'
       },
       {
         profilePic: '../../assets/images/employees/ross_geller.PNG',
@@ -69,7 +73,8 @@ export class SearchComponent implements OnInit {
         team: 'OCBC Singapore',
         manager: 'Lalit Agarawal',
         mobileNo: '7406449941',
-        email: 'rgeller@infrrd.ai'
+        email: 'rgeller@infrrd.ai',
+        location: 'Bangalore'
       },
       {
         profilePic: '../../assets/images/employees/sheldon_cooper.PNG',
@@ -81,8 +86,23 @@ export class SearchComponent implements OnInit {
         team: 'OCBC Singapore',
         manager: 'Lalit Agarawal',
         mobileNo: '7555449941',
-        email: 'scooper@infrrd.ai'
+        email: 'scooper@infrrd.ai',
+        location: 'Pune'
+      },
+      {
+        profilePic: '../../assets/images/employees/raj.PNG',
+        name: 'Raj',
+        designation: 'Sr.UI Developer',
+        ratings: 5,
+        experience: 7,
+        dateOfJoining: 2009,
+        team: 'OCBC Singapore',
+        manager: 'Lalit Agarawal',
+        mobileNo: '7555449941',
+        email: 'raj@infrrd.ai',
+        location: 'Pune'
       }
+
     ]
   }
 
