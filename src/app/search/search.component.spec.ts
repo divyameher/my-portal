@@ -1,25 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { SearchComponent } from "./search.component";
 
-import { SearchComponent } from './search.component';
+
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ SearchComponent ]
-    })
-    .compileComponents();
-  });
-
+  const employeeServiceSpy = jasmine.createSpyObj('EmployeeService', ['getEmployees']);
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = new SearchComponent(employeeServiceSpy);
   });
-
-  it('should create', () => {
+  it('should create component', () => {
+    spyOn(component, 'getEmployees');
     expect(component).toBeTruthy();
   });
 });

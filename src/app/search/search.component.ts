@@ -26,12 +26,9 @@ export class SearchComponent implements OnInit {
     { id: 5, description: '5 Year above' }
   ]
   filteredEmployees: IEmployee[];
-  constructor(private employeeService: EmployeeService) {
-    this.employeeService.getEmployees().subscribe(
-      (response) => {
-        this.employeesResponse = this.employees = this.filteredEmployees = response;
-      }
-    );
+  constructor(private employeeService: EmployeeService) { }
+  ngOnInit(): void {
+    this.getEmployees();
     this.searchForm = new FormGroup({
       location: new FormControl(null),
       department: new FormControl(null),
@@ -40,10 +37,13 @@ export class SearchComponent implements OnInit {
       experience: new FormControl(null)
     });
   }
-
-  ngOnInit(): void {
+  getEmployees() {
+    this.employeeService.getEmployees().subscribe(
+      (response) => {
+        this.employeesResponse = this.employees = this.filteredEmployees = response;
+      }
+    );
   }
-
   onClickOfCheckbox(event: boolean) {
     if (event) {
       this.employees = _.filter(this.filteredEmployees, { location: 'Bangalore' })
