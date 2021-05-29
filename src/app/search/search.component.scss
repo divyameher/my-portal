@@ -1,0 +1,56 @@
+@import "../../theme/_mixins";
+
+.search-container {
+    @include flexbox();
+    height: calc(100vh - 65px);
+    .search-section {
+        min-width: 300px;
+        border-right: 1px solid var(var(--lightgray));
+        @include flexbox($flexDirection: column);
+        .search-form {
+            @include flexbox($flexDirection: column, $flexGrow: 1);
+            .dropdown-label {
+                font-size: 14px;
+                color: var(--gray);
+                padding: 10px 20px;
+            }
+        }
+        .button-section {
+            @include flexbox($justifyContent: space-around);
+            padding-bottom: 30px;
+            .clear-button {
+                @include button(
+                    $background: var(--white),
+                    $borderColor: var(--primary-color),
+                    $color: var(--primary-color)
+                );
+            }
+            .submit-button {
+                @include button(
+                    $background: var(--primary-color),
+                    $borderColor: var(--primary-color),
+                    $color: var(--white)
+                );
+            }
+        }
+    }
+    .results-section {
+        background: var(--primary-color-tint);
+        flex-grow: 1;
+        overflow-y: auto;
+        .top-section {
+            @include flexbox($justifyContent: space-between, $alignItems: center);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 15px;
+            .checkbox-container {
+                @include flexbox($alignItems: center);
+            }
+        }
+        .bottom-section {
+            height: 100%;
+            padding: 15px;
+            @include flexbox($flexWrap: wrap);
+        }
+    }
+}

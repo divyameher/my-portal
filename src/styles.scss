@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./theme/_variables";
+@import "./theme/_mixins";
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    font-family: "Roboto", sans-serif;
+}
+.fab-button {
+    background: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+.custom-dropdown {
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid var(--lightgray);
+    box-shadow: 0 1px var(--lightgray);
+    width: 100%;
+    &:focus-visible {
+        outline: none;
+    }
+}

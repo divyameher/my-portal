@@ -1,0 +1,45 @@
+<div class="employee-card">
+    <div class="header">
+        <div class="name-pic-section">
+            <div class="profile-pic">
+                <img [src]="employee.profilePic" alt="{{employee.name}}">
+            </div>
+            <div class="name-section">
+                <div class="name">{{employee?.name}}</div>
+                <div class="designation">{{employee?.designation}}</div>
+            </div>
+        </div>
+        <div class="messaging-info">
+            <button class="fab-button">
+                <i class="fab fa-telegram-plane"></i>
+            </button>
+        </div>
+    </div>
+    <div class="ratings">{{employee?.ratings}} Rating &nbsp;&nbsp;&nbsp;
+        <app-star-rating [ratings]="employee.ratings"></app-star-rating>
+    </div>
+    <div class="experience-section">
+        <div>Experience: <b>{{employee?.experience}} Years</b></div>
+        <div>Date of Joining: <b>{{employee?.dateOfJoining}}</b></div>
+    </div>
+    <div class="team">
+        Current Team: <b>{{employee?.team}}</b>
+    </div>
+    <div class="manager">
+        Reporting Manager: <b>{{employee?.manager}}</b>
+    </div>
+    <div class="contact-info">
+        <div class="mobile-no">
+            <button class="fab-button">
+                <i class="fas fa-phone-alt"></i>
+            </button>
+            <b>&nbsp;&nbsp;&nbsp;{{employee.mobileNo}}</b>
+        </div>
+        <div class="email">
+            <button class="fab-button">
+                <i class="fas fa-envelope"></i>
+            </button>
+            <b>&nbsp;&nbsp;&nbsp;{{employee.email}}</b>
+        </div>
+    </div>
+</div>
