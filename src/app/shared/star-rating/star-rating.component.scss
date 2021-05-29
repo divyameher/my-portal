@@ -1,7 +1,7 @@
 :host {
     --star-size: 30px;
-    --star-color: lightgray;
-    --star-background: #fc0;
+    --star-color: var(var(--lightgray));
+    --star-background: var(--yellow);
 }
 
 .stars {

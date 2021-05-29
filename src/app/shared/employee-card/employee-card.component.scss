@@ -1,6 +1,6 @@
 .employee-card {
-    background: #fff;
-    border: 1px solid lightgray;
+    background: var(--white);
+    border: 1px solid var(var(--lightgray));
     width: 350px;
     border-radius: 3px;
     font-size: 12px;
@@ -27,14 +27,14 @@
                 }
                 .designation {
                     font-size: 12px;
-                    color: gray;
+                    color: var(--gray);
                 }
             }
         }
         .messaging-info {
             .fab-button {
                 font-size: 18px;
-                color: gray;
+                color: var(--gray);
             }
         }
     }
@@ -42,21 +42,21 @@
         display: flex;
         align-items: center;
         padding: 15px 10px;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid var(var(--lightgray));
     }
     .experience-section {
         display: flex;
         justify-content: space-between;
         padding: 15px 10px;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid var(var(--lightgray));
     }
     .team {
         padding: 15px 10px;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid var(var(--lightgray));
     }
     .manager {
         padding: 15px 10px;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid var(var(--lightgray));
     }
     .contact-info {
         display: flex;
@@ -64,12 +64,12 @@
         padding: 10px;
         .mobile-no {
             .fab-button {
-                color: rgb(34, 106, 240);
+                color: var(--blue);
             }
         }
         .email {
             .fab-button {
-                color: rgb(187, 6, 6);
+                color: var(--red);
             }
         }
     }

@@ -1,15 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./theme/_variables";
 body {
     margin: 0;
     padding: 0;
-    --medium-gray: #d1d0d8;
-    --primary-color: #059862;
 }
 * {
     font-family: "Roboto", sans-serif;
 }
 .fab-button {
-    background: #fff;
+    background: var(--white);
     width: 30px;
     height: 30px;
     border-radius: 100%;
@@ -22,7 +20,7 @@ body {
 .custom-dropdown {
     border: none;
     padding: 10px;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid var(var(--lightgray));
     box-shadow: 0 1px lightgrey;
     width: 100%;
     &:focus-visible {

@@ -20,15 +20,14 @@
 }
 
 .link-active {
-    --link-active: #e9f5e9;
-    background: var(--link-active);
+    background: var(--primary-color-tint);
 }
 
 .content-section {
     display: flex;
     .left-section {
         position: relative;
-        border-right: 1.5px solid lightgray;
+        border-right: 1.5px solid var(var(--lightgray));
         min-width: 30px;
         max-width: 150px;
         height: calc(100vh - 65px);
