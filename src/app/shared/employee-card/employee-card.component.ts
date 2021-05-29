@@ -6,12 +6,6 @@ import { IEmployee } from '../domain/IEmployee';
   templateUrl: './employee-card.component.html',
   styleUrls: ['./employee-card.component.scss']
 })
-export class EmployeeCardComponent implements OnInit {
+export class EmployeeCardComponent {
   @Input() employee: IEmployee;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

@@ -26,7 +26,9 @@ export class SearchComponent implements OnInit {
     { id: 5, description: '5 Year above' }
   ]
   filteredEmployees: IEmployee[];
+
   constructor(private employeeService: EmployeeService) { }
+
   ngOnInit(): void {
     this.getEmployees();
     this.searchForm = new FormGroup({
@@ -37,6 +39,7 @@ export class SearchComponent implements OnInit {
       experience: new FormControl(null)
     });
   }
+
   getEmployees() {
     this.employeeService.getEmployees().subscribe(
       (response) => {
@@ -44,6 +47,7 @@ export class SearchComponent implements OnInit {
       }
     );
   }
+
   onClickOfCheckbox(event: boolean) {
     if (event) {
       this.employees = _.filter(this.filteredEmployees, { location: 'Bangalore' })
@@ -51,6 +55,7 @@ export class SearchComponent implements OnInit {
       this.employees = this.filteredEmployees;
     }
   }
+
   submit() {
     // filter employees based on experience
     const experienceFilteredData = _.filter(this.employeesResponse, (key) => {
@@ -66,6 +71,7 @@ export class SearchComponent implements OnInit {
     this.employees = filteredData as IEmployee[];
     this.filteredEmployees = this.employees;
   }
+
   clear() {
     this.searchForm.reset();
     this.employees = this.employeesResponse;

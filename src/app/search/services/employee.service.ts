@@ -9,6 +9,7 @@ import { IEmployee } from 'src/app/shared/domain/IEmployee';
 export class EmployeeService {
 
   constructor(private httpClient: HttpClient) { }
+
   getEmployees(): Observable<IEmployee[]> {
     const url = '../../../assets/employee-data/employees.json'
     return this.httpClient.get<IEmployee[]>(url);

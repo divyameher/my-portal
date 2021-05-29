@@ -6,7 +6,8 @@ describe('StarRatingComponent', () => {
   beforeEach(() => {
     component = new StarRatingComponent();
   });
-  it('should create component', () => {
+  it('should create component and initialize input prop with default value', () => {
     expect(component).toBeTruthy();
+    expect(component.ratings).toEqual(5);
   });
 });

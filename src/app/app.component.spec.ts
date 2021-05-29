@@ -5,7 +5,8 @@ describe('AppComponent', () => {
   beforeEach(() => {
     component = new AppComponent();
   });
-  it('should create component', () => {
+  it('should create component and initialize default data', () => {
     expect(component).toBeTruthy();
+    expect(component.isSideNavExpanded).toBeTruthy();
   });
 });
