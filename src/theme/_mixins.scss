@@ -12,3 +12,11 @@
     flex-grow: $flexGrow;
     flex-wrap: $flexWrap;
 }
+
+@mixin button($background, $borderColor, $color) {
+    background: $background;
+    border: 1px solid $borderColor;
+    color: $color;
+    padding: 10px 30px;
+    border-radius: 3px;
+}

@@ -19,18 +19,18 @@
             @include flexbox($justifyContent: space-around);
             padding-bottom: 30px;
             .clear-button {
-                background: var(--white);
-                border: 1px solid var(--primary-color);
-                padding: 10px 30px;
-                color: var(--primary-color);
-                border-radius: 3px;
+                @include button(
+                    $background: var(--white),
+                    $borderColor: var(--primary-color),
+                    $color: var(--primary-color)
+                );
             }
             .submit-button {
-                background: var(--primary-color);
-                border: 1px solid var(--primary-color);
-                padding: 10px 30px;
-                color: var(--white);
-                border-radius: 3px;
+                @include button(
+                    $background: var(--primary-color),
+                    $borderColor: var(--primary-color),
+                    $color: var(--white)
+                );
             }
         }
     }
