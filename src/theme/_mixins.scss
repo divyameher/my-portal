@@ -1,0 +1,14 @@
+@mixin flexbox(
+    $justifyContent: flex-start,
+    $alignItems: stretch,
+    $flexDirection: row,
+    $flexGrow: 0,
+    $flexWrap: nowrap
+) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+    flex-grow: $flexGrow;
+    flex-wrap: $flexWrap;
+}

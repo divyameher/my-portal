@@ -1,3 +1,5 @@
+@import "../../../theme/_mixins";
+
 .employee-card {
     background: var(--white);
     border: 1px solid var(var(--lightgray));
@@ -6,13 +8,10 @@
     font-size: 12px;
     margin: 10px;
     .header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flexbox($justifyContent: space-between, $alignItems: center);
         padding: 10px;
         .name-pic-section {
-            display: flex;
-            align-items: center;
+            @include flexbox($alignItems: center);
             .profile-pic {
                 img {
                     width: 60px;
@@ -39,14 +38,12 @@
         }
     }
     .ratings {
-        display: flex;
-        align-items: center;
+        @include flexbox($alignItems: center);
         padding: 15px 10px;
         border-bottom: 1px solid var(var(--lightgray));
     }
     .experience-section {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox($justifyContent: space-between);
         padding: 15px 10px;
         border-bottom: 1px solid var(var(--lightgray));
     }
@@ -59,8 +56,7 @@
         border-bottom: 1px solid var(var(--lightgray));
     }
     .contact-info {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox($justifyContent: space-between);
         padding: 10px;
         .mobile-no {
             .fab-button {

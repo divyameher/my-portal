@@ -1,15 +1,14 @@
+@import "../../theme/_mixins";
+
 .search-container {
-    display: flex;
+    @include flexbox();
     height: calc(100vh - 65px);
     .search-section {
         min-width: 300px;
         border-right: 1px solid var(var(--lightgray));
-        display: flex;
-        flex-direction: column;
+        @include flexbox($flexDirection: column);
         .search-form {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
+            @include flexbox($flexDirection: column, $flexGrow: 1);
             .dropdown-label {
                 font-size: 14px;
                 color: var(--gray);
@@ -17,8 +16,7 @@
             }
         }
         .button-section {
-            display: flex;
-            justify-content: space-around;
+            @include flexbox($justifyContent: space-around);
             padding-bottom: 30px;
             .clear-button {
                 background: var(--white);
@@ -41,23 +39,18 @@
         flex-grow: 1;
         overflow-y: auto;
         .top-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flexbox($justifyContent: space-between, $alignItems: center);
             font-size: 12px;
             font-weight: 600;
             padding: 15px;
             .checkbox-container {
-                display: flex;
-                align-items: center;
+                @include flexbox($alignItems: center);
             }
         }
         .bottom-section {
             height: 100%;
             padding: 15px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+            @include flexbox($flexWrap: wrap);
         }
     }
 }

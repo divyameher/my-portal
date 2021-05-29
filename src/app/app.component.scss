@@ -1,16 +1,15 @@
+@import "../theme/_mixins";
+
 .top-nav {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox($justifyContent: space-between, $alignItems: center);
     padding: 5px;
-    align-items: center;
     .logo-section {
         img {
             width: 100px;
         }
     }
     .right-menu {
-        display: flex;
-        align-items: center;
+        @include flexbox($alignItems: center);
         .icon-bell {
             font-size: 22px;
             color: var(--medium-gray);
@@ -24,7 +23,7 @@
 }
 
 .content-section {
-    display: flex;
+    @include flexbox();
     .left-section {
         position: relative;
         border-right: 1.5px solid var(var(--lightgray));
@@ -32,8 +31,7 @@
         max-width: 150px;
         height: calc(100vh - 65px);
         .side-nav {
-            display: flex;
-            flex-direction: column;
+            @include flexbox($flexDirection: column);
             font-size: 16px;
             height: calc(100vh - 65px);
             a {
@@ -59,7 +57,7 @@
             .fab-expand-collase {
                 position: relative;
                 left: 15px;
-                color: gray;
+                color: var(--gray);
             }
         }
     }
