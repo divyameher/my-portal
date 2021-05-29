@@ -2,7 +2,7 @@
 
 .employee-card {
     background: var(--white);
-    border: 1px solid var(var(--lightgray));
+    border: 1px solid var(--lightgray);
     width: 350px;
     border-radius: 3px;
     font-size: 12px;
@@ -40,20 +40,20 @@
     .ratings {
         @include flexbox($alignItems: center);
         padding: 15px 10px;
-        border-bottom: 1px solid var(var(--lightgray));
+        border-bottom: 1px solid var(--lightgray);
     }
     .experience-section {
         @include flexbox($justifyContent: space-between);
         padding: 15px 10px;
-        border-bottom: 1px solid var(var(--lightgray));
+        border-bottom: 1px solid var(--lightgray);
     }
     .team {
         padding: 15px 10px;
-        border-bottom: 1px solid var(var(--lightgray));
+        border-bottom: 1px solid var(--lightgray);
     }
     .manager {
         padding: 15px 10px;
-        border-bottom: 1px solid var(var(--lightgray));
+        border-bottom: 1px solid var(--lightgray);
     }
     .contact-info {
         @include flexbox($justifyContent: space-between);
