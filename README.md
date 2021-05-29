@@ -1,6 +1,9 @@
 # MyPortal
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+Node version used to develop this application is `14.15.0`
+
+Filter Employees Data
 
 ## Development server
 
