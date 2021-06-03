@@ -26,7 +26,7 @@
     @include flexbox();
     .left-section {
         position: relative;
-        border-right: 1.5px solid var(var(--lightgray));
+        border-right: 1.5px solid var(--lightgray);
         min-width: 30px;
         max-width: 150px;
         height: calc(100vh - 65px);
